@@ -91,3 +91,17 @@ function submitToAPI(e) {
          }});
      }
 
+     function visitorsCount() {
+        fetch(' https://867c416d61.execute-api.us-east-1.amazonaws.com/final/visitors', {
+            method: 'GET',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            }
+        })
+        .then(response => response.json())
+        .then(response => console.log(JSON.stringify(response)))
+        .then(response => document.getElementById("visitor").value = JSON.stringify(response))
+
+     }
+
