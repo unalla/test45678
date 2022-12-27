@@ -102,7 +102,7 @@ function submitToAPI(e) {
         })
         .then(response => response.json())
         .then(response => console.log(JSON.stringify(response)))
-        .then(response => document.getElementById("visitor").value = JSON.stringify(response))
+        .then(response => document.getElementById("visitor").innerHTML = JSON.stringify(response))
 
      }
 
