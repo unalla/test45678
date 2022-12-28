@@ -97,8 +97,7 @@ function submitToAPI(e) {
             method: 'GET',
             headers: {
                 'Accept': 'application/json',
-                'Content-Type': 'application/json',
-                'crossDomain': "true"
+                'Content-Type': 'application/json'
             }
         })
         .then(response => response.json())
