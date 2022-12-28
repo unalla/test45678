@@ -92,7 +92,7 @@ function submitToAPI(e) {
      }
 
      function visitorsCount() {
-        document.getElementById("visitor").innerHTML = "0"
+        document.getElementById("visitor").innerHTML = "1"
         fetch(' https://867c416d61.execute-api.us-east-1.amazonaws.com/final/visitors', {
             method: 'GET',
             headers: {
