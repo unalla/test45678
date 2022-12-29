@@ -91,18 +91,20 @@ function submitToAPI(e) {
          }});
      }
 
-     function visitorsCount() {
-        document.getElementById("visitor").innerHTML = "1"
-        fetch(' https://867c416d61.execute-api.us-east-1.amazonaws.com/final/visitors', {
-            method: 'GET',
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json'
-            }
-        })
-        .then(response => response.json())
-        .then(response => console.log(JSON.stringify(response)))
-        .then(response => document.getElementById("visitor").innerHTML = JSON.stringify(response))
-
-     }
-
+    const visitorCount = fetch(' https://867c416d61.execute-api.us-east-1.amazonaws.com/final/visitors', {
+                            method: 'GET',
+                            headers: {
+                                'Accept': 'application/json',
+                                'Content-Type': 'application/json'
+                            }
+                        }).then(response =>  response.json())
+                        .then(count => {           
+                            return count
+                        });      
+   
+        
+    const visitors = async() => {
+        document.getElementById("visitor").innerHTML =  await visitorCount;
+    }
+           
+    
