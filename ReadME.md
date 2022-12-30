@@ -1,4 +1,4 @@
-Sample project to covers:
+This sample project covers:
 <ul>
 <li>Hosting S3 Static Website</li>
 <li>Createing CloudFront OAC (Origin Access Control or OriginAccess Identity) distribution</li>
@@ -9,25 +9,6 @@ Sample project to covers:
 
 <b>Important:</b>
 For CloudFront distribution, after creating CloudFront distribution you must create a bucket policy to give permission to CloudFront
-<i>{
-    "Version": "2008-10-17",
-    "Id": "PolicyForCloudFrontPrivateContent",
-    "Statement": [
-        {
-            "Sid": "AllowCloudFrontServicePrincipal",
-            "Effect": "Allow",
-            "Principal": {
-                "Service": "cloudfront.amazonaws.com"
-            },
-            "Action": "s3:GetObject",
-            "Resource": "arn:aws:s3:::Your Website/*",
-            "Condition": {
-                "StringEquals": {
-                    "AWS:SourceArn": "arn:aws:cloudfront::Your-AccountId:distribution/CloudFront-DistributionName"
-                }
-            }
-        }
-    ]
-}
+![image](https://user-images.githubusercontent.com/43560747/210114675-dbec2f09-e4b3-406d-95d3-a80bbfd5c954.png)
 </i>
 For CD from GitHub to AWS, Add your AWS Access Key and Secret to your project repo
