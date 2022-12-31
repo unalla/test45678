@@ -7,6 +7,9 @@ This sample project covers:
 <li>Using API Gateway and Lambda Function to forward the ContactUs Form details to an email using SES</li>
 </ul>
 
+<b>Architecture</b>
+![image](https://user-images.githubusercontent.com/43560747/210120608-871d12c8-d356-4cea-85df-5bd9da656040.png)
+
 <b>Important:</b>
 <p>For CloudFront distribution, after creating CloudFront distribution you must create a bucket policy to give permission to CloudFront </p>
 
