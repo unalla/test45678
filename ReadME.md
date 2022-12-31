@@ -8,7 +8,12 @@ This sample project covers:
 </ul>
 
 <b>Architecture</b>
-![image](https://user-images.githubusercontent.com/43560747/210120608-871d12c8-d356-4cea-85df-5bd9da656040.png)
+
+
+
+![Arch-1](https://user-images.githubusercontent.com/43560747/210120656-4954657c-4e4e-4eab-91db-4818327a6fea.png)
+
+
 
 <b>Important:</b>
 <p>For CloudFront distribution, after creating CloudFront distribution you must create a bucket policy to give permission to CloudFront </p>
